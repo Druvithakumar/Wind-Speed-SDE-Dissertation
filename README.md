@@ -65,11 +65,3 @@ so it is not included in the default run.
 
 - `plots/` — all figures (`.png`)
 - `Dataset/` — all result tables (`.csv`) and cached intermediate outputs (`.npz`)
-
-## Reproducibility note
-
-Deterministic components (data loading, Weibull/ACF fitting, the three SDE simulations,
-Higham validation, ARIMA) reproduce exactly given the same input data. GARCH's simulation
-step and LSTM training involve randomness that is not perfectly seed-locked across runs,
-so those specific results will be close to, but not bit-identical to, the values reported
-in the dissertation.
